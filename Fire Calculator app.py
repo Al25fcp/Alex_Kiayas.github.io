@@ -19,26 +19,26 @@ def run_zone_model_simulation(
 ):
     """Runs the two-zone model simulation based on user inputs."""
     print("Running Zone Model Simulation...")
-    # Constants
+    #Constants
     air_density = 1.2; specific_hc = 1.0; T_amb = 292; gravity = 9.81; K = 0.2; z_0 = 0.0
     
-    # Calculations
+    #Calculations
     A_room = room_width * room_length
     time_points = np.linspace(0, max_sim_time, resolution)
     dt = time_points[1] - time_points[0]
     HRR = fire_growth_rate * (time_points**2)
     Q_conv = 0.7 * HRR
     
-    # Initialize arrays
+    #Initialize arrays
     z = np.zeros(resolution); T_upper = np.zeros(resolution); rho_upper = np.zeros(resolution)
     m_upper = np.zeros(resolution); T_smoke = np.zeros(resolution)
     
-    # Initial conditions
+    #Initial conditions
     z[0] = room_height; T_upper[0] = T_amb; rho_upper[0] = air_density; m_upper[0] = 0.0; T_smoke[0] = T_amb
     
     con = K * ((gravity * (air_density**2)) / (specific_hc * T_amb))**(1/3)
     
-    # Main simulation loop
+    #Main simulation loop
     for i in range(1, resolution):
         z_previous = z[i-1]; m_upper_previous = m_upper[i-1]; T_upper_previous = T_upper[i-1]
         Q_conv_previous = Q_conv[i-1]
