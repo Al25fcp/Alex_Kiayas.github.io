@@ -3,40 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Alexandros Kiayas - Engineering Portfolio</title>
     <style>
         body { background-color: #f4f4f9; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; font-family: sans-serif; }
-        .page { box-shadow: 0 4px 8px rgba(0,0,0,0.15); margin-bottom: 20px; max-width: 800px; width: 100%; height: auto; display: block; }
         .btn { background: #24292e; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-bottom: 20px; font-weight: bold; }
         .btn:hover { background: #444; }
+        .viewer-container { width: 100%; max-width: 1000px; height: 85vh; box-shadow: 0 4px 8px rgba(0,0,0,0.15); border-radius: 8px; overflow: hidden; }
+        iframe { width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
 
-    <!-- If you uploaded your original Overleaf PDF as portfolio.pdf, this button works. If named differently, change the href below -->
+    <!-- Download button for the original PDF -->
     <a href="Alexandros%20Kiayas%20engineering%20portfolio.pdf" class="btn" download>📥 Download Original PDF</a>
 
-
-    <!-- Your 19 Portfolio Pages -->
-    <img src="p1.jpg" alt="Page 1" class="page">
-    <img src="p2.jpg" alt="Page 2" class="page">
-    <img src="p3.jpg" alt="Page 3" class="page">
-    <img src="p4.jpg" alt="Page 4" class="page">
-    <img src="p5.jpg" alt="Page 5" class="page">
-    <img src="p6.jpg" alt="Page 6" class="page">
-    <img src="p7.jpg" alt="Page 7" class="page">
-    <img src="p8.jpg" alt="Page 8" class="page">
-    <img src="p9.jpg" alt="Page 9" class="page">
-    <img src="p10.jpg" alt="Page 10" class="page">
-    <img src="p11.jpg" alt="Page 11" class="page">
-    <img src="p12.jpg" alt="Page 12" class="page">
-    <img src="p13.jpg" alt="Page 13" class="page">
-    <img src="p14.jpg" alt="Page 14" class="page">
-    <img src="p15.jpg" alt="Page 15" class="page">
-    <img src="p16.jpg" alt="Page 16" class="page">
-    <img src="p17.jpg" alt="Page 17" class="page">
-    <img src="p18.jpg" alt="Page 18" class="page">
-    <img src="p19.jpg" alt="Page 19" class="page">
+    <!-- Interactive PDF Viewer containing sharp images and live clickable hyperlinks -->
+    <div class="viewer-container">
+        <iframe src="https://github.io"></iframe>
+    </div>
 
 </body>
 </html>
